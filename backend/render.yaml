@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: roadsense-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --worker-class gthread --workers 1 --threads 4 --bind 0.0.0.0:$PORT --timeout 180 app:app
+    plan: starter
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: sqlite:///road_damage.db
+      - key: UPLOAD_FOLDER
+        value: uploads
+      - key: WEIGHTS_DIR
+        value: weights
+      - key: CORS_ORIGINS
+        value: https://roadsense-ai.vercel.app
+      - key: ADMIN_EMAIL
+        value: admin@roadsense.ai
+      - key: ADMIN_PASSWORD
+        value: Admin@1234

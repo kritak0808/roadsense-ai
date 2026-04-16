@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\krita\Desktop\vision net rsi\road_surface_detection\ai_model\predict.py", line 68, in predict_damage
+    img_array = preprocess_image(img_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\krita\Desktop\vision net rsi\road_surface_detection\ai_model\predict.py", line 50, in preprocess_image
+    img = image.load_img(img_path, target_size=(224, 224))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\krita\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\keras\src\utils\image_utils.py", line 247, in load_img
+    with open(path, "rb") as f:
+         ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\Users\\krita\\Desktop\\vision'

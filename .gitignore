@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.antigravity/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Database
+*.db
+*.sqlite3
+backend/instance/
+
+# Uploads & weights (large files)
+uploads/
+weights/
+backend/uploads/
+backend/weights/*.pth
+backend/weights/*.pt
+backend/logs/
+
+# ML models (too large for git)
+*.h5
+*.keras
+*.pth
+*.pt
+*.pkl
+accuracy_graph.png
+confusion_matrix.png
+best_model.h5
+best_road_model.keras
+best_visnet_model.keras
+
+# Dataset (too large)
+dataset/
+
+# Frontend
+node_modules/
+.next/
+frontend/node_modules/
+frontend/.next/
+frontend/tsconfig.tsbuildinfo
+
+# VS Code
+.vscode/
+
+# Windows AppData / OS
+AppData/
+.DS_Store
+Thumbs.db
+
+# Pytest / cache
+.pytest_cache/
+backend/.pytest_cache/
+backend/__pycache__/
+backend/database/__pycache__/
+backend/services/__pycache__/
+backend/routes/__pycache__/

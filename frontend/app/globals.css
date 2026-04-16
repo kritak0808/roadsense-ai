@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+  body {
+    @apply bg-gray-950 text-gray-100 font-sans antialiased;
+  }
+  * {
+    @apply border-gray-800;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl p-6;
+  }
+  .btn-primary {
+    @apply bg-brand-600 hover:bg-brand-500 text-white font-medium px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-gray-800 hover:bg-gray-700 text-gray-100 font-medium px-4 py-2 rounded-lg transition-colors;
+  }
+  .badge-good { @apply bg-green-900 text-green-300 text-xs px-2 py-0.5 rounded-full; }
+  .badge-crack { @apply bg-amber-900 text-amber-300 text-xs px-2 py-0.5 rounded-full; }
+  .badge-pothole { @apply bg-red-900 text-red-300 text-xs px-2 py-0.5 rounded-full; }
+  .badge-vandalism { @apply bg-purple-900 text-purple-300 text-xs px-2 py-0.5 rounded-full; }
+}
+
+/* Leaflet dark mode fix */
+.leaflet-container { background: #111827; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #111827; }
+::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
