@@ -3,7 +3,7 @@
  */
 import axios, { AxiosInstance } from "axios";
 
-const BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:5000";
+const BASE = process.env.NEXT_PUBLIC_API_URL ?? "https://roadsense-ai-1.onrender.com";
 
 export const apiClient: AxiosInstance = axios.create({
   baseURL: `${BASE}/api`,

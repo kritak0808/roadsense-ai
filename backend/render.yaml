@@ -20,7 +20,7 @@ services:
       - key: WEIGHTS_DIR
         value: weights
       - key: CORS_ORIGINS
-        value: https://roadsense-ai.vercel.app
+        value: https://roadsense-ai.vercel.app,https://roadsense-ai-1.onrender.com
       - key: ADMIN_EMAIL
         value: admin@roadsense.ai
       - key: ADMIN_PASSWORD
