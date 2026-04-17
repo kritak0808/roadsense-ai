@@ -91,6 +91,10 @@ def create_app(config_override: Any = None) -> Flask:
         _seed_admin(app)
 
     # ── Health check ──────────────────────────────────────────────────────────
+    @app.route("/")
+    def home():
+        return "RoadSense AI is running 🚀"
+
     @app.route("/api/health")
     def health():
         return jsonify({"success": True, "data": {"status": "ok"}, "error": None})
