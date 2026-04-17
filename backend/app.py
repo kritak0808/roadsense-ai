@@ -92,8 +92,8 @@ def create_app(config_override: Any = None) -> Flask:
 
     # ── Health check ──────────────────────────────────────────────────────────
     @app.route("/")
-    def home():
-        return "RoadSense AI is running 🚀"
+    def root():
+        return "RoadSense AI Backend is LIVE 🚀"
 
     @app.route("/api/health")
     def health():
