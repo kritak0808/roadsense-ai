@@ -10,7 +10,7 @@ const nextConfig = {
     ],
   },
   async rewrites() {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://roadsense-ai-1.onrender.com";
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://roadsense-ai-2.onrender.com";
     return [
       {
         source: "/api/:path*",

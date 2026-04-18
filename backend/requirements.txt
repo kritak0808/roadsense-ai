@@ -19,6 +19,8 @@ eventlet==0.36.1
 sqlalchemy==2.0.30
 
 # ── ML / CV ───────────────────────────────────────────────────────────────────
+torch==2.3.0+cpu
+torchvision==0.18.0+cpu
 timm==1.0.3
 opencv-python-headless==4.9.0.80
 Pillow==10.3.0
