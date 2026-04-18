@@ -126,6 +126,16 @@ def create_app(config_override: Any = None) -> Flask:
     register_socket_events(socketio)
 
     logger.info("Road Damage Ultra app created successfully")
+
+    # Pre-warm model at startup to avoid cold-start timeout on first request
+    try:
+        with app.app_context():
+            from ai_model.predict import _load_model
+            _load_model("resnet50", None)
+            logger.info("ResNet50 pre-warmed successfully")
+    except Exception as e:
+        logger.warning("Model pre-warm failed (non-fatal): %s", e)
+
     return app
 
 
